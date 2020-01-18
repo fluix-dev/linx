@@ -150,3 +150,10 @@ body {
 	width:100%;
 	height:100px;
 }
+
+.logo{
+	order: 2;
+	width: 5%;
+	height: 5%;
+	display:flex;
+}
