@@ -1,0 +1,77 @@
+/*CSS variables*/
+:root {
+	--lig-bp: #2c2d7a;
+	--dar-bp: #12133f;
+}
+
+.menubar {
+	position: absolute;
+	right:5px;
+	/*top:0px;*/
+	display: inline-block;
+	/*vertical-align:inherit;*/
+	align-self: center;
+}
+
+.menuitem {
+	margin:10px;
+	/*vertical-align:inherit;*/
+	align-self: center;
+}
+
+
+.header-bar {
+	display:flex;
+	top:-20px;
+	position:relative;
+	/*vertical-align:middle;*/
+}
+
+#title {
+	/*position:absolute;*/
+	/*vertical-align:inherit;*/
+	display: inline-block;
+	align-self: center;/*auto | flex-start | flex-end | center | baseline | stretch*/
+	/*top:0px;*/
+	/*float:left;*/
+	/*order:1;*/
+}
+/*
+#home {
+	order:2;
+}
+
+#about {
+	order:3;
+}
+
+#team {
+	order:4;
+}
+#network {
+	order:5;
+}
+*/
+
+h1, h2, h3 {
+	font-family: 'Montserrat', sans-serif;
+	color: white;
+}
+
+p, a {
+	font-family: 'Raleway', sans-serif;
+	color: white;
+}
+
+a {
+	text-decoration-line: none;
+}
+
+a:hover {
+	text-decoration-line: underline;
+}
+
+body {
+	background-color: var(--dar-bp);
+	padding:10px;
+}
