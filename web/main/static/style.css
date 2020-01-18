@@ -4,74 +4,139 @@
 	--dar-bp: #12133f;
 }
 
+/*global properties*/
+* {
+	color:inherit;
+	/*top:-5px;*/
+	/*position:relative;*/
+}
 .menubar {
-	position: absolute;
-	right:5px;
-	/*top:0px;*/
-	display: inline-block;
+	/*position: absolute;*/
+	position:relative;
+	/*right:20px;*/
+	/*left:50%;*/
+	top:22px;
+	/*width:70%;*/
+	/*display: inline-block;*/
 	/*vertical-align:inherit;*/
-	align-self: center;
+	align-self: flex-end;
+	/*float:right;*/
+	display:flex;
+	justify-content: flex-end;/*space-between;*/
 }
 
 .menuitem {
-	margin:10px;
+	/*margin:50px;*/
 	/*vertical-align:inherit;*/
-	align-self: center;
+	/*align-self: center;*/
+	font-family: 'Raleway', sans-serif;
+	font-size:25px;
+	display:flex;
+	margin-left:40px;
+	/*fix for window width adjustment (<575px) - responsive*/
+
+	/*width:50%;*/
+	/*flex:auto;*/
 }
 
 
 .header-bar {
 	display:flex;
-	top:-20px;
-	position:relative;
+	display:inline-block;
+	width:100%;
 	/*vertical-align:middle;*/
+	align-items:center;
+	/*background-color: white;*/
+}
+
+.content {
+	position:relative;
+	padding-top: 30px;
 }
 
 #title {
 	/*position:absolute;*/
 	/*vertical-align:inherit;*/
 	display: inline-block;
-	align-self: center;/*auto | flex-start | flex-end | center | baseline | stretch*/
+	/*align-self: center;*/
+	top:-25px;
 	/*top:0px;*/
-	/*float:left;*/
+	/*font-size:50px;*/
+	font-size:28px;
+	/*width:53%;*/
+	float:left;
 	/*order:1;*/
+	color:var(--dar-bp);
 }
 /*
+
+hr {
+	position:absolute;
+  height: 3px;
+  width: 25%;
+  margin: 0;
+  background: tomato;
+  border: none;
+  transition: .3s ease-in-out;
+}*/
+
+/*
+#about:hover ~ hr {
+  margin-left: 25%;
+}
+
+#team:hover ~ hr {
+  margin-left: 50%;
+}
+
+#network:hover ~ hr {
+  margin-left: 75%;
+}
+
 #home {
 	order:2;
-}
+}*/
 
 #about {
 	order:3;
+	color:var(--dar-bp);
 }
 
 #team {
 	order:4;
+	color:var(--dar-bp);
 }
+
 #network {
 	order:5;
+	color:var(--dar-bp);
 }
-*/
 
 h1, h2, h3 {
 	font-family: 'Montserrat', sans-serif;
 	color: white;
 }
 
-p, a {
+p {
 	font-family: 'Raleway', sans-serif;
 	color: white;
+	font-size: 16px;
 }
 
 a {
+	/*color: white;*/
 	text-decoration-line: none;
 }
 
-a:hover {
+.menuitem a:hover {
 	text-decoration-line: underline;
 }
 
 body {
 	background-color: var(--dar-bp);
-	padding:10px;
+	/*padding:10px;*/
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 20px;
+	padding-left: 20px;
 }
