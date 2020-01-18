@@ -1,8 +1,8 @@
+from config import BUFFER_SIZE
 from socket import AF_INET, socket, SOCK_STREAM
 from threading import Thread
 import sys
 
-BUFFER_SIZE = 1024
 
 class Node():
     def __init__(self, host, port):

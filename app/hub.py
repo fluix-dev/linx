@@ -1,9 +1,10 @@
+from config import BUFFER_SIZE
 from socket import AF_INET, socket, SO_REUSEADDR, SOL_SOCKET, SOCK_STREAM
 from threading import Thread
 
 clients = {}
 addresses = {}
-BUFFER_SIZE = 1024
+
 
 class Hub:
     def __init__(self, host, port, level):
