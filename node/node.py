@@ -36,5 +36,6 @@ class Node():
             if msg == "{quit}":
                 self.client_socket.close()
 
-node = Node('localhost', 33003)
-node.begin()
+if __name__ == "__main__":
+    node = Node('localhost', 33003)
+    node.begin()
