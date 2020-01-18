@@ -1,0 +1,25 @@
+#bkgd-gif {
+/*	margin:0px;
+	width:110%;
+	left:-10px;
+	padding:0px;
+	height:auto;
+	position:fixed;
+	z-index:-20;*/
+	z-index:-20;
+}
+
+#bkgd-filter {
+	background-color: rgba(44, 45, 122,0.6);
+	z-index:-15;
+	height:483px;
+}
+
+.bkgd {
+	margin:0px;
+	width:110%;
+	left:-10px;
+	padding:0px;
+	height:auto;
+	position:fixed;
+}
