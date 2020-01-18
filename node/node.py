@@ -1,52 +1,40 @@
-#!/usr/bin/env python3
-"""Script for Tkinter GUI chat client."""
 from socket import AF_INET, socket, SOCK_STREAM
 from threading import Thread
 import sys
 
+BUFFER_SIZE = 1024
 
-def receive():
-    """Handles receiving of messages."""
-    while True:
-        try:
-            msg = client_socket.recv(BUFSIZ).decode("utf8")
-            sys.stdout.write('\r' + msg + '\n>>> ')
-        except OSError:  # Possibly client has left the chat.
-            break
+class Node():
+    def __init__(self, host, port):
+        self.addr = (host, port)
+        self.client_socket = socket(AF_INET, SOCK_STREAM)
 
+    def begin(self):
+        self.client_socket.connect(self.addr)
 
-def send():  # event is passed by binders.
-    """Handles sending of messages."""
-    msg = input(">>> ")
-    client_socket.send(bytes(msg, "utf8"))
-    if msg == "{quit}":
-        client_socket.close()
+        receive_thread = Thread(target=self.receive)
+        receive_thread.start()
 
+        send_thread = Thread(target=self.send)
+        send_thread.start()
 
-def on_closing():
-    """This function is to be called when the window is closed."""
-    my_msg.set("{quit}")
-    send()
+    def receive(self):
+        while True:
+            try:
+                msg = self.client_socket.recv(BUFFER_SIZE).decode("utf8")
+                sys.stdout.write('\r' + msg + '\n>>> ')
+            except OSError:
+                break
 
-#----Now comes the sockets part----
-HOST = input('Enter host: ')
-if not HOST:
-    HOST = 'localhost'
+    def send(self):
+        while True:
+            msg = input(">>> ")
+            CURSOR_UP_ONE = '\x1b[1A'
+            ERASE_LINE = '\x1b[2K'
+            sys.stdout.write(CURSOR_UP_ONE + ERASE_LINE)
+            self.client_socket.send(bytes(msg, "utf8"))
+            if msg == "{quit}":
+                self.client_socket.close()
 
-PORT = input('Enter port: ')
-if not PORT:
-    PORT = 33001
-else:
-    PORT = int(PORT)
-
-BUFSIZ = 1024
-ADDR = (HOST, PORT)
-
-client_socket = socket(AF_INET, SOCK_STREAM)
-client_socket.connect(ADDR)
-
-receive_thread = Thread(target=receive)
-receive_thread.start()
-
-while True:
-    send()
+node = Node('localhost', 33003)
+node.begin()
