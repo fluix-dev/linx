@@ -33,15 +33,13 @@
 
         <header class="header-cntr">
             <br /> <br /> <br /> <br /> <br /> <br /> <br />
-            <br /> <br /> <br /> 
-            <!-- <br /> -->
-             <!-- <br /> <br /> <br /> -->
-            <!-- <br /> <br /> -->
-            <img class="head-img" src="img/ideanodegram.svg"/>
+            <br /> <br /> <br /> <br /> <br /> <br /> <br />
+            <br /> <br />
+            <div> <img class="head-img" src="img/ideanodegram.svg"/> </div>
             <h1 class="head-title">the idea</h1>
         </header>
 
-        <!-- <div class="container3"></div> -->
+        <div class="container3"></div>
         <div class="container4"></div>
 
         <div class="main-cntr">
@@ -51,26 +49,31 @@
 
                 <span class="tldrcont"> - by routing data packets through multiple hubs, we offer more safety and reliability than a traditional server system.</span>
               </p>
-          </div>
             <br/> <br/> <br/> <br/>
+          </div>
 
           <p>For enterprises all around the world, server downtimes are often costly and destructive. Server downtimes negatively affect enterprises and their entire user base. Downtimes can be caused by a variety of factors, such as human error and network outages. A large part of the problem stems from how every client is routed to a singular server, which allows for large scale disasters that affect the entire user base.</p>
 
-             <br/>
+          <br/>
 
-          <img id="compare" src="img/servercomparison.svg"/> 
+          <!-- <div> <img class="head-img" id="compare" src="img/servercomparison.svg"/> </div> -->
 
-          <hr style="position:relative;top:-110px"/> 
-          <!-- <hr style="position:relative;" /> -->
-          <!-- <br/> <br/> -->
-          <div class="node" style="position:relative;top:-100px">
+          <br/> <br/> <hr/> <br/> <br/>
+          <div class="node">
             <p>To solve this problem, our team devised a decentralized, self-healing networking framework. Our framework alleviates the issue by designating clients to hubs, which act as intermediary transfers. Hubs are clients given the role of a mini-server. When a hub goes down, the clients linked to it will either connect to an existing hub, or form a new hub. To ensure zero data loss, all hubs are backed up with the same information a server would have. </p>
           </div>
-            <div class="node" > 
-                <img class="node-img-left" id="newnode" src="img/newnode.svg" />
-                <p style="position:relative;top:-10px">For example, if a new node was introduced into the network, it would ping the server for a list of all hubs (1). The node then will ping all available hubs (2), and if one is available, it will join the closest (least amount of time to ping) (3). If a hub  reaches a certain threshold, it will greedily split into two hubs.</p>
+
+            <div class="node">
+              <img class="node-img-left" id="newnode" src="img/newnode.svg" />
+            </div>
+            <br/> <br/> <br/>
+            <div class="node-img-right">
+                <p>For example, if a new node was introduced into the network, it would ping the server for a list of all hubs (1). The node then will ping all available hubs (2), and if one is available, it will join the closest (least amount of time to ping) (3). If a hub  reaches a certain threshold, it will greedily split into two hubs.</p>
             </div>
 
+            <div class="node">
+            <!-- <p>the best words.</p> -->
+            </div>
         </div>
 
     </div>
