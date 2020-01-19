@@ -4,10 +4,7 @@ from packets.packet import Packet
 
 class TextPacket(Packet):
     id = 0x10
-
-    def __init__(self, data):
-        self.data = data
-
+    
     def client_receive(self):
         sys.stdout.write('\r' + self.data + '\n>>> ')
 
