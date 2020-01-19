@@ -61,35 +61,42 @@ const data = {
       "id": "e0",
       "source": "svr",
       "target": "h1",
-      "color" : "#FF0000"
+      "color" : "#bcc3cd"
     }, {
       "id": "e1",
       "source": "svr",
-      "target": "h2"
+      "target": "h2",
+      "color" : "#bcc3cd"
     }, {
       "id": "e2",
       "source": "h1",
-      "target": "n1"
+      "target": "n1",
+      "color" : "#bcc3cd"
     }, {
       "id": "e3",
       "source": "h1",
-      "target": "n2"
+      "target": "n2",
+      "color" : "#bcc3cd"
     }, {
       "id": "e4",
       "source": "h1",
-      "target": "n3"
+      "target": "n3",
+      "color" : "#bcc3cd"
     }, {
       "id": "e5",
       "source": "h2",
-      "target": "n4"
+      "target": "n4",
+      "color" : "#bcc3cd"
     }, {
       "id": "e6",
       "source": "h2",
-      "target": "n5"
+      "target": "n5",
+      "color" : "#bcc3cd"
     }, {
       "id": "e7",
       "source": "h2",
-      "target": "n6"
+      "target": "n6",
+      "color" : "#bcc3cd"
     }
   ]
 };
