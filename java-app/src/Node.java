@@ -69,7 +69,8 @@ public class Node {
 			public void received(Connection connection, Object object) {
 				if (object instanceof TextResponse) {
 					TextResponse response = (TextResponse) object;
-					System.out.println(response.text);
+					if (response.resend)
+						System.out.println(response.text);
 				}
 
 				if (object instanceof GetHubListResponse) {
@@ -84,19 +85,7 @@ public class Node {
 							e.printStackTrace();
 						}
 						client.close();
-					}/* else {
-						int[] clients = new int[response.addrs.size()];
-						for (int i = 0; i < response.addrs.size(); i ++) {
-							try {
-								connect(response.ports.get(i));
-								GetNodeListRequest request = new GetNodeListRequest();
-								client.sendTCP(request);
-							} catch (IOException e) {
-								e.printStackTrace();
-							}
-							
-						}
-					}*/
+					}
 				}
 			}
 		});
