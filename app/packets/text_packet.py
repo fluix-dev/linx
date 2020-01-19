@@ -15,11 +15,11 @@ class TextPacket(Packet):
         node.client_socket.send(bytes([self.id]) + bytes(self.data, "utf8"))
 
     def server_receive(self):
-        sys.stdout.write('[M] ' + self.data.decode('utf8') + '\n')
+        sys.stdout.write('[M] ' + str(self.data) + '\n')
 
     def server_send(self, clients):
         for sock in clients:
-            sock.send(self.data)
+            sock.send(bytes([self.id]) + bytes(self.data, "utf8"))
 
     def set_data(self, data):
-        self.data = bytes([self.id]) + bytes(data, "utf8")
+        self.data = data
