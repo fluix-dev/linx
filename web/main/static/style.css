@@ -145,12 +145,11 @@ a {
 
 .menuitem a:hover {
 	text-decoration-line: none;
-	color: var(--dar-bp);
+	color: var(--lig-bp);
 }
 
 body {
 	background-color: var(--dar-bp);
-	/*padding:10px;*/
 	padding-top: 3px;
 	padding-bottom: 10px;
 	padding-right: 20px;
@@ -195,6 +194,6 @@ body {
 	left:0px;
 }
 
-#title:hover{
-  color:#2c2d7a;
+.title:hover{
+  color:var(--lig-bp);
 }
