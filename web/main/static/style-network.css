@@ -1,0 +1,17 @@
+#container {
+	top:50px;
+	position:relative;
+	height:100%;
+	width: 100%;
+	/*background-color: white;*/
+	z-index:1; 
+}
+
+.content {
+	height:100vh;
+}
+
+.header-bar {
+	border-bottom-color: var(--dar-bp);
+}
+
