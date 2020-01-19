@@ -1,7 +1,4 @@
-import java.io.File;
 import java.io.IOException;
-import java.net.InetAddress;
-import java.util.Arrays;
 import java.util.Scanner;
 
 import com.esotericsoftware.kryo.Kryo;
@@ -15,16 +12,27 @@ public class Node {
 	Scanner in = new Scanner(System.in);
 
 	public static void main(String[] args) throws IOException {
-		Node node = new Node();
+		Node node;
+		if (args.length == 0)
+			node = new Node(-1);
+		else
+			node = new Node(Integer.parseInt(args[0]));
 	}
 
-	public Node() throws IOException {
-		connect();
+	public Node(int port) throws IOException {
+		if (port == -1)
+			connect();
+		else
+			connect(port);
 		addListener();
-		registerKyro();
-
-		GetHubListRequest ghl_request = new GetHubListRequest();
-		client.sendTCP(ghl_request);
+		
+		Kryo kryo = client.getKryo();
+		Main.registerKyro(kryo);
+		
+		if (port == -1) {
+			GetHubListRequest ghl_request = new GetHubListRequest();
+			client.sendTCP(ghl_request);
+		}
 
 		while (true) {
 			TextRequest request = new TextRequest();
@@ -49,6 +57,12 @@ public class Node {
 			Hub hub = new Hub(Main.AVAILABLE_PORTS[Main.MAX_LEVEL][0], 2);
 		}
 	}
+	
+	private void connect(int port) throws IOException {
+		client = new Client();
+		client.start();
+		client.connect(5000, "localhost", port);
+	}
 
 	private void addListener() {
 		client.addListener(new Listener() {
@@ -60,28 +74,31 @@ public class Node {
 
 				if (object instanceof GetHubListResponse) {
 					GetHubListResponse response = (GetHubListResponse) object;
-					if (response.addrs.length == 0) {
+					if (response.addrs.size() < 2) {
 						System.out.println("Transforming into [L1] hub.");
+						AddToHubListRequest request = new AddToHubListRequest();
+						client.sendTCP(request);
 						try {
-							Hub hub = new Hub(Main.AVAILABLE_PORTS[1][0], 1);
+							Hub hub = new Hub(Main.AVAILABLE_PORTS[1][response.addrs.size()], 1);
 						} catch (IOException e) {
 							e.printStackTrace();
 						}
 						client.close();
-					}
+					}/* else {
+						int[] clients = new int[response.addrs.size()];
+						for (int i = 0; i < response.addrs.size(); i ++) {
+							try {
+								connect(response.ports.get(i));
+								GetNodeListRequest request = new GetNodeListRequest();
+								client.sendTCP(request);
+							} catch (IOException e) {
+								e.printStackTrace();
+							}
+							
+						}
+					}*/
 				}
 			}
 		});
 	}
-
-	private void registerKyro() {
-		Kryo kryo = client.getKryo();
-		kryo.register(TextRequest.class);
-		kryo.register(TextResponse.class);
-		kryo.register(String[].class);
-		kryo.register(int[].class);
-		kryo.register(GetHubListRequest.class);
-		kryo.register(GetHubListResponse.class);
-	}
-
 }
