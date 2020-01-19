@@ -72,14 +72,10 @@
 	position:relative;
 	/*vertical-align:inherit;*/
 	display: inline-block;
-	/*align-self: center;*/
 	top:2px;
 	padding-top:0px;
-	/*font-size:50px;*/
 	font-size:35px;
-	/*width:60%;*/
 	float:left;
-	/*order:1;*/
 	color:var(--dar-bp);
 }
 
@@ -197,4 +193,8 @@ body {
 	position:absolute;
 	top:0px;
 	left:0px;
+}
+
+#title:hover{
+  color:#2c2d7a;
 }
