@@ -148,7 +148,8 @@ a {
 }
 
 .menuitem a:hover {
-	text-decoration-line: underline;
+	text-decoration-line: none;
+	color: var(--dar-bp);
 }
 
 body {
