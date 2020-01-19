@@ -3,10 +3,10 @@ from socket import AF_INET, socket, SO_REUSEADDR, SOL_SOCKET, SOCK_STREAM
 from threading import Thread
 from packets.manager import PACKET_LIST
 from packets.text_packet import TextPacket
+from packets.quit_packet import QuitException
 
 clients = {}
 addresses = {}
-
 
 class Hub:
     def __init__(self, host, port, level):
@@ -41,12 +41,15 @@ class Hub:
         TextPacket(WELCOME_MESSAGE % name).server_send([client])
         TextPacket(JOIN_MESSAGE % name).server_send(clients)
         clients[client] = name
-        while True:
-            msg = client.recv(BUFFER_SIZE)
-            packet = PACKET_LIST[msg[0]](msg[1:])
-            packet.server_receive()
-            packet.modify_data(msg, self, clients, client)
-            packet.server_send(clients)
+        try:
+            while True:
+                msg = client.recv(BUFFER_SIZE)
+                packet = PACKET_LIST[msg[0]](msg[1:])
+                packet.server_receive(clients, client)
+                packet.modify_data(msg, self, clients, client)
+                packet.server_send(clients)
+        except QuitException:
+            pass
 
 
 if __name__ == "__main__":
