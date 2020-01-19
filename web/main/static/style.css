@@ -162,7 +162,7 @@ body {
 	padding-left: 0px;
 	overflow-x:hidden;
 }
-
+/*
 .top-thing {
 	background-color:white;
 	position:absolute;
@@ -171,7 +171,7 @@ body {
 	left:0px;
 	width:100%;
 	height:10px;
-}
+}*/
 
 .logo{
 	/* order: 1; */
@@ -203,6 +203,7 @@ body {
 .title:hover{
   color:var(--lig-bp);
 }
+<<<<<<< HEAD
 
 .container2 {
 	margin-top: 0px;
@@ -261,3 +262,5 @@ body {
 #sec{
 	padding-left: 380px;
 } */
+=======
+>>>>>>> 431f9cf5968909436e885aa0fc15ef2105ff74d5
