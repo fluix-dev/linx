@@ -148,6 +148,12 @@ a {
 	color: var(--lig-bp);
 }
 
+
+#title a:hover {
+	text-decoration-line: none;
+	color: var(--lig-bp);
+}
+
 body {
 	background-color: var(--dar-bp);
 	padding-top: 3px;
