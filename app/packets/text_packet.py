@@ -9,7 +9,7 @@ class TextPacket(Packet):
         self.data = data
 
     def client_receive(self):
-        sys.stdout.write('\r' + self.data[1:] + '\n>>> ')
+        sys.stdout.write('\r' + self.data + '\n>>> ')
 
     def client_send(self, node):
         node.client_socket.send(bytes([self.id]) + bytes(self.data, "utf8"))

@@ -25,7 +25,7 @@ class Node():
         while True:
             try:
                 msg = self.client_socket.recv(BUFFER_SIZE).decode("utf8")
-                packet = PACKET_LIST[ord(msg[0])](msg)
+                packet = PACKET_LIST[ord(msg[0])](msg[1:])
                 packet.client_receive()
             except OSError:
                 break
