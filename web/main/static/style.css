@@ -171,8 +171,8 @@ body {
 }
 
 .logo{
-	order: 2;
+	/* order: 1; */
 	width: 5%;
 	height: 5%;
-	display:flex;
+	/* display:flex; */
 }
