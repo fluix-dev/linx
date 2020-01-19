@@ -8,6 +8,7 @@
 
 .header-cntr {
 	text-align:left;
+	width:100%;
 }
 
 .header-cntr, .main-cntr {
@@ -21,7 +22,9 @@
 	z-index:5;
 }
 
-.main-cntr {}
+.main-cntr {
+	position: relative;
+}
 
 .tldr {
 	font-size: 35px;
@@ -38,7 +41,7 @@ p {
 .head-img {
 	z-index:-5;
 	position:absolute; /*fixed?*/
-	top:50px;
+	top:-250px;
 	left:0px;
 	width:100%;
 	filter:brightness(0.75);
