@@ -21,5 +21,5 @@ class TextPacket(Packet):
         for sock in clients:
             sock.send(bytes([self.id]) + bytes(self.data, "utf8"))
 
-    def set_data(self, data):
-        self.data = data
+    def modify_data(self, data, hub, clients, client):
+        self.data = clients[client] + ": " + data.decode("utf8")

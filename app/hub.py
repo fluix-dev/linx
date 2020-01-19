@@ -1,7 +1,8 @@
-from config import BUFFER_SIZE
+from config import BUFFER_SIZE, WELCOME_MESSAGE, JOIN_MESSAGE
 from socket import AF_INET, socket, SO_REUSEADDR, SOL_SOCKET, SOCK_STREAM
 from threading import Thread
 from packets.manager import PACKET_LIST
+from packets.text_packet import TextPacket
 
 clients = {}
 addresses = {}
@@ -25,40 +26,28 @@ class Hub:
 
         self.server_socket.close()
 
+
     def accept_incoming_connections(self):
         while True:
             client, client_address = self.server_socket.accept()
             print("%s:%s has connected." % client_address)
-            client.send(bytes([0x10]) + bytes("Name: ", "utf8"))
+            TextPacket("Name: ").server_send([client])
+            #client.send(bytes([0x10]) + bytes("Name: ", "utf8"))
             addresses[client] = client_address
             Thread(target=self.handle_client, args=(client,)).start()
 
 
     def handle_client(self, client):
         name = client.recv(BUFFER_SIZE).decode("utf8")
-        welcome = 'Welcome %s!' % name
-        #packet = TextPacket
-        client.send(bytes([0x10]) + bytes(welcome, "utf8"))
-        #msg = "%s has joined the chat!" % name
-        #broadcast(bytes(msg, "utf8"))
+        TextPacket(WELCOME_MESSAGE % name).server_send([client])
+        TextPacket(JOIN_MESSAGE % name).server_send(clients)
         clients[client] = name
         while True:
             msg = client.recv(BUFFER_SIZE)
-            if msg != bytes("{quit}", "utf8"):
-                packet = PACKET_LIST[msg[0]](msg[1:])
-                packet.server_receive()
-                packet.set_data(name + ": " + msg.decode("utf8"))
-                packet.server_send(clients)
-            else:
-                client.send(bytes("{quit}", "utf8"))
-                client.close()
-                del clients[client]
-                broadcast(TextPacket(bytes("%s has left the chat." % name, "utf8")))
-                break
-
-
-def broadcast(packet):
-    packet.server_send(self)
+            packet = PACKET_LIST[msg[0]](msg[1:])
+            packet.server_receive()
+            packet.modify_data(msg, self, clients, client)
+            packet.server_send(clients)
 
 
 if __name__ == "__main__":

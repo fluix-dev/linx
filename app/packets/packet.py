@@ -13,5 +13,8 @@ class Packet:
     def server_receive(self):
         pass
 
-    def server_send(self, hub):
+    def server_send(self, clients):
+        pass
+
+    def modify_data(self, data, hub, clients, client):
         pass
