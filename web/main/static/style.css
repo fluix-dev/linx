@@ -48,15 +48,17 @@
 	/*width:50%;*/
 	/*flex:auto;*/
 }
-
+/*
 
 .header-bar {
 	display:flex;
 	display:inline-block;
 	width:100%;
-	/*vertical-align:middle;*/
 	align-items:center;
-	/*background-color: white;*/
+}*/
+
+.header-bar {
+	background-color: white;
 }
 
 .content {
@@ -131,7 +133,7 @@ hr {
 
 #home {
 	order:2;
-}*/
+}*/                                                                             
 
 #about {
 	order:3;
