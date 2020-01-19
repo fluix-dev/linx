@@ -31,9 +31,42 @@
 	top: 700px;
 	position: absolute;
 	z-index:-15;
-	height: 600px;
+	height: 500px;
 	width: 100%;
+	/* background-color: #12133f; */
+	background-color: yellow;
+}
+
+.download {
+	margin-top: 0px;
+	top: 700px;
+	position: absolute;
+	z-index:0;
+	height: 200px;
+	width: 100%;
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 900;
 	background-color: #12133f;
+	/* background-color: yellow; */
+}
+#download-url:hover {
+	text-align: center;
+	padding: 15px;
+	border:1px solid white;
+	border-radius: 90px;
+}
+
+#download-url{
+	text-decoration: none;
+}
+
+.downloadtext {
+	/* justify-content: center; */
+	position: absolute;
+	text-align: center;
+	margin-top: 90px;
+	color: #6d6fb0;
 }
 
 .pretext{
@@ -47,8 +80,9 @@
 .landingtext{
 	position: absolute;
 	font-family: 'Raleway', sans-serif;
-	font-size: 50px;
+	font-size: 60px;
 	color: #f1e28b;
 	padding-left: 50px;
 	margin-top: -15px;
+	font-weight:900;
 }
