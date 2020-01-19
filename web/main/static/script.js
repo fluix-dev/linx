@@ -121,8 +121,9 @@ var s = new sigma({
   container: 'container',
   settings: {
 	defaultNodeColor: '#f1e28b', // yellow
-	defaultEdgeColor: '#bcc3cd', // blue gray
-    edgeColor: 'source'
+	// defaultEdgeColor: '#bcc3cd', // blue gray
+    // edgeColor: 'source',
+    scalingMode: 'inside'
     // animationsTime: 1000	
   }
 });
