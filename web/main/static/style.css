@@ -39,6 +39,21 @@
 	/*flex:auto;*/
 }
 
+.bmenuitem {
+	/*margin:50px;*/
+	/*vertical-align:inherit;*/
+	/*align-self: center;*/
+	font-weight:900;
+	font-family: 'Raleway', sans-serif;
+	font-size:25px;
+	display:flex;
+	margin-left:40px;
+	/*fix for window width adjustment (<575px) - responsive*/
+
+	/*width:50%;*/
+	/*flex:auto;*/
+}
+
 
 .header-bar {
 	display:flex;
