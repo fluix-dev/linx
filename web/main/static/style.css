@@ -37,7 +37,7 @@
 	/* display:flex; */
 	padding-left:10px;
 	padding-right:10px;
-	padding-top:10px;
+	/*padding-top:10px;*/
 	/*padding-left:10px;
   padding-right:10px; */
 	margin: auto;
@@ -90,14 +90,40 @@
 	display: inline-block;
 	/*align-self: center;*/
 	/* top:100px; */
-	padding-top:10px;
+	padding-top:0px;
 	/*font-size:50px;*/
-	font-size:28px;
-	width:5%;
+	font-size:35px;
+	/*width:60%;*/
 	float:left;
 	/*order:1;*/
 	color:var(--dar-bp);
 }
+
+@media screen and (min-width: 1130px) {
+  #title {
+    width:60%;
+  }
+}
+
+@media screen and (min-width: 995px) {
+  #title {
+    width:50%;
+  }
+}
+
+@media screen and (min-width: 782px) {
+  #title {
+    width:40%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #title {
+    width:20%;
+  }
+}
+
+
 /*
 
 hr {
@@ -187,8 +213,8 @@ body {
 
 .logo{
 	/* order: 1; */
-	width: 5%;
-	height: 5%;
+	width: 80px;
+	height: 80px;
 	margin-left:10px;
   margin-right:10px;
 	padding-left:10px;
