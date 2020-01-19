@@ -1,5 +1,13 @@
-#container {
-	top:50px;
+/*CSS variables*/
+:root {
+	--lig-bp: #2c2d7a;
+	/* primary */
+	--dar-bp: #12133f;
+	/* secondary */
+}
+
+#sigma-container {
+	top:-30px;
 	position:relative;
 	height:100%;
 	width: 100%;
@@ -10,8 +18,14 @@
 .content {
 	height:100vh;
 }
-
+/*
 .header-bar {
 	border-bottom-color: var(--dar-bp);
 }
 
+*/
+
+body {
+		background-color: var(--dar-bp);
+
+}

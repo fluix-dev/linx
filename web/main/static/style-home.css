@@ -25,3 +25,20 @@
 	height:auto;
 	position:fixed;
 }
+
+.pretext{
+	font-family: 'Raleway', sans-serif;
+	font-size: 35px;
+	color: #6d6fb0;
+	padding-left: 50px;
+	padding-top: 700px;
+}
+
+.landingtext{
+	position: absolute;
+	font-family: 'Raleway', sans-serif;
+	font-size: 50px;
+	color: #f1e28b;
+	padding-left: 50px;
+	margin-top: -15px;
+}

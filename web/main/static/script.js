@@ -118,7 +118,7 @@ var cfg = {
 
 var s = new sigma({
   graph: data,
-  container: 'container',
+  container: 'sigma-container',
   settings: {
 	defaultNodeColor: '#f1e28b', // yellow
 	defaultEdgeColor: '#bcc3cd', // blue gray
