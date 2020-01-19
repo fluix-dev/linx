@@ -45,9 +45,9 @@ class Hub:
         while True:
             msg = client.recv(BUFFER_SIZE)
             if msg != bytes("{quit}", "utf8"):
-                packet = PACKET_LIST[msg[0]](msg)
+                packet = PACKET_LIST[msg[0]](msg[1:])
                 packet.server_receive()
-                packet.set_data(name + ": " + msg[1:].decode("utf8"))
+                packet.set_data(name + ": " + msg.decode("utf8"))
                 packet.server_send(clients)
             else:
                 client.send(bytes("{quit}", "utf8"))
