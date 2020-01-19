@@ -27,21 +27,21 @@
 
 .floater {
 	position:fixed;
-	bottom:0px;
+	bottom:-10px;
 	left:0px;
 	width:400px;
-	height:230px;
+	height:275px;
 	display: inline-block;
 	/*border:5px dashed red;*/
 	background: radial-gradient(farthest-corner at 250px 200px, rgba(18,19,63,1) 0%, rgba(18,19,63,0.5) 30%, rgba(18,19,63,0) 70%);
-	/*background: radial-gradient(farthest-corner at 200px 120px, rgba(109,111,176,1) 0%, rgba(109,111,176,0.5) 30%, rgba(109,111,176,0) 70%);*/
+	/*background: radial-gradient(farthest-corner at 200px 138px, rgba(109,111,176,1) 0%, rgba(109,111,176,0.5) 30%, rgba(109,111,176,0) 70%);*/
 	word-wrap: break-word;
 	z-index:100;
 }
 
 .float-text {
 	left:30%;
-	top:50px;
+	top:70px;
 	width: 50%;
 	display: inline-block;
 	position: relative;

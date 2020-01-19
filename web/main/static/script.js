@@ -2,55 +2,61 @@ const data = {
   "nodes": [
     {
       "id": "svr",
-      "label": "The Server",
+      "label": "server",
       "x": 5,
       "y": 0,
-      "size": 25
+      "size": 38
     }, {
       "id": "h1",
-      "label": "Hub",
+      "label": "hub",
       "x": 2,
       "y": 2,
-      "size": 15
+      "size": 20
     }, {
       "id": "h2",
-      "label": "Hub",
+      "label": "hub",
       "x": 8,
       "y": 2,
-      "size": 15
+      "size": 20
     }, {
       "id": "n1",
-      "label": "Node",
+      
+      "label": "node",
       "x": 0,
       "y": 4,
       "size": 10
     }, {
       "id": "n2",
-      "label": "Node",
+      
+      "label": "node",
       "x": 2,
       "y": 4,
       "size": 10
     }, {
       "id": "n3",
-      "label": "Node",
+      
+      "label": "node",
       "x": 4,
       "y": 4,
       "size": 10
     }, {
       "id": "n4",
-      "label": "Node",
+      
+      "label": "node",
       "x": 6,
       "y": 4,
       "size": 10
     }, {
       "id": "n5",
-      "label": "Node",
+      
+      "label": "node",
       "x": 8,
       "y": 4,
       "size": 10
     }, {
       "id": "n6",
-      "label": "Node",
+      
+      "label": "node",
       "x": 10,
       "y": 4,
       "size": 10
@@ -61,41 +67,49 @@ const data = {
       "id": "e0",
       "source": "svr",
       "target": "h1",
+      "size": 10,
       "color" : "#bcc3cd"
     }, {
       "id": "e1",
       "source": "svr",
       "target": "h2",
+      "size": 10,
       "color" : "#bcc3cd"
     }, {
       "id": "e2",
       "source": "h1",
       "target": "n1",
+      "size": 7,
       "color" : "#bcc3cd"
     }, {
       "id": "e3",
       "source": "h1",
       "target": "n2",
+      "size": 7,
       "color" : "#bcc3cd"
     }, {
       "id": "e4",
       "source": "h1",
       "target": "n3",
+      "size": 7,
       "color" : "#bcc3cd"
     }, {
       "id": "e5",
       "source": "h2",
       "target": "n4",
+      "size": 7,
       "color" : "#bcc3cd"
     }, {
       "id": "e6",
       "source": "h2",
       "target": "n5",
+      "size": 7,
       "color" : "#bcc3cd"
     }, {
       "id": "e7",
       "source": "h2",
       "target": "n6",
+      "size": 7,
       "color" : "#bcc3cd"
     }
   ]
@@ -103,7 +117,7 @@ const data = {
 
 
 var cfg = {
-    defaultNodeType: 'def',
+    defaultNbodeType: 'def',
     defaultEdgeType: 'def',
     defaultLabelColor: '#000',
     defaultEdgeColor: '#bcc3cd',
@@ -114,7 +128,7 @@ var cfg = {
     defaultNodeHoverColor: '#000',
     defaultLabelHoverColor: '#000',
     edgeHoverColor: 'edge',
-    edgeHoverSizeRatio: 1
+    edgeHoverSizeRatio: 2
 }
 
 var s = new sigma({
@@ -126,7 +140,11 @@ var s = new sigma({
     defaultLabelColor: '#ffffff00',
     defaultLabelHoverColor: '#f1e28b',
     defaultHoverLabelBGColor: '#ffffff00',
-    edgeColor: 'source'
+    edgeColor: 'source',
+    defaultLabelSize: 20,
+    font: 'Raleway',
+    maxNodeSize: 50,
+      sideMargin: 2
     // animationsTime: 1000	
   }
 });
