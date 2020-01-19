@@ -112,6 +112,7 @@ var cfg = {
     edgeColor: 'source',
     defaultNodeBorderColor: '#000',
     defaultNodeHoverColor: '#000',
+    defaultLabelHoverColor: '#000',
     edgeHoverColor: 'edge',
     edgeHoverSizeRatio: 1
 }
@@ -122,6 +123,9 @@ var s = new sigma({
   settings: {
 	defaultNodeColor: '#f1e28b', // yellow
 	defaultEdgeColor: '#bcc3cd', // blue gray
+    defaultLabelColor: '#ffffff00',
+    defaultLabelHoverColor: '#f1e28b',
+    defaultHoverLabelBGColor: '#ffffff00',
     edgeColor: 'source'
     // animationsTime: 1000	
   }
