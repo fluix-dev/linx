@@ -31,6 +31,7 @@
 	/*margin:50px;*/
 	/*vertical-align:inherit;*/
 	/*align-self: center;*/
+
 	font-family: 'Raleway', sans-serif;
 	font-size:25px;
 	display:flex;
@@ -83,12 +84,12 @@
 }
 
 #title {
-	/*position:absolute;*/
+	position:relative;
 	/*vertical-align:inherit;*/
 	display: inline-block;
 	/*align-self: center;*/
-	top:-25px;
-	/*top:0px;*/
+	/* top:100px; */
+	top:5px;
 	/*font-size:50px;*/
 	font-size:28px;
 	/*width:53%;*/
@@ -187,10 +188,10 @@ body {
 	/* order: 1; */
 	width: 5%;
 	height: 5%;
-	margin-left:3px;
-  margin-right:3px;
-	padding-left:3px;
-  padding-right:3px;
+	margin-left:10px;
+  margin-right:10px;
+	padding-left:10px;
+  padding-right:10px;
 	/* margin-left: -100px; */
 	/* display:flex; */
 }
