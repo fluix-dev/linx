@@ -53,7 +53,7 @@ public class Node {
 			}
 		}
 		if (!client.isConnected()) {
-			System.out.println("Transforming into [L2] hub.");
+			System.out.println("Transforming into [L2] server / hub.");
 			Hub hub = new Hub(Main.AVAILABLE_PORTS[Main.MAX_LEVEL][0], 2);
 		}
 	}
@@ -76,7 +76,7 @@ public class Node {
 				if (object instanceof GetHubListResponse) {
 					GetHubListResponse response = (GetHubListResponse) object;
 					if (response.addrs.size() < 2) {
-						System.out.println("Transforming into [L1] hub.");
+						System.out.println("Transforming into [L1] server / hub.");
 						AddToHubListRequest request = new AddToHubListRequest();
 						client.sendTCP(request);
 						try {
