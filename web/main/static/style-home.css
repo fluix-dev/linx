@@ -33,7 +33,6 @@
 	z-index:-15;
 	height: 500px;
 	width: 100%;
-	/* background-color: #12133f; */
 	background-color: yellow;
 }
 
@@ -44,29 +43,29 @@
 	z-index:0;
 	height: 200px;
 	width: 100%;
-	text-align: center;
 	font-family: 'Raleway', sans-serif;
 	font-weight: 900;
 	background-color: #12133f;
-	/* background-color: yellow; */
 }
+
 #download-url:hover {
-	text-align: center;
-	padding: 15px;
 	border:1px solid white;
 	border-radius: 90px;
 }
 
 #download-url{
+	padding: 15px;
 	text-decoration: none;
 }
 
 .downloadtext {
-	/* justify-content: center; */
 	position: absolute;
 	text-align: center;
 	margin-top: 90px;
+	left: 45%;
+	margin-right:auto;
 	color: #6d6fb0;
+	display: inline-block;
 }
 
 .pretext{
