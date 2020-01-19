@@ -10,7 +10,7 @@ class Packet:
     def client_send(self, node):
         pass
 
-    def server_receive(self):
+    def server_receive(self, clients, client):
         pass
 
     def server_send(self, clients):

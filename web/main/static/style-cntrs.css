@@ -30,7 +30,14 @@
 	font-size: 35px;
 	margin-bottom: 30px;
 	margin-top: 30px;
+	color: #f1e28b;
+}
 
+.tldrcont{
+	font-size: 25px;
+	margin-bottom: 30px;
+	margin-top: 30px;
+	color: #ffffff;
 }
 
 p {
@@ -50,7 +57,7 @@ p {
 
 
 .node-img-left, .node-img-right {
-	width:200px;
+	width:950px;
 	/*display: inline-block;*/
 	position:relative;
 	border-radius: 20px;
@@ -60,12 +67,12 @@ p {
 
 .node-img-left {
 	float:left;
-	margin-right:20px;
+	margin-right:30px;
 }
 
 .node-img-right {
 	float:right;
-	margin-left:20px;
+	margin-left:30px;
 }
 
 .node {

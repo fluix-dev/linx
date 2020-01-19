@@ -24,7 +24,7 @@
                 <h1 id="title"><a href="index.html">linx</a></h1>
 
                 <span class="menuitem text-cool" id="about"><a href="about.html" class="text-cool">the idea</a></span>
-                <span class="menuitem text-primary" id="team"><a href="team.html">the team</a></span>
+                <!-- <span class="menuitem text-primary" id="team"><a href="team.html">the team</a></span> -->
                 <span class="menuitem" id="network"><a href="network.html">network</a></span>
 
 
@@ -40,17 +40,31 @@
         </header>
 
         <div class="container3"></div>
+        <div class="container4"></div>
 
         <div class="main-cntr">
-            <p class="tldr">tl;dr - a single liner.</p>
-            <!-- <div id="container"></div> -->
-            <div class="node">
-            <p>For enterprises all around the world, server downtimes are often costly and destructive. Server downtimes negatively affect enterprises and their entire user base. Downtimes can be caused by a variety of factors, such as human error and network outages. A large part of the problem stems from how every client is routed to a singular server, which allows for large scale disasters that affect the entire user base.</p>
-            </div>
+            <div >
+              <br/> <br/>
+              <p style="word-wrap: break-word;"><span class="tldr">tl;dr</span>
+
+                <span class="tldrcont"> - by routing data packets through multiple hubs, we offer more safety and reliability than a traditional server system.</span>
+              </p>
+            <br/> <br/> <br/> <br/>
+          </div>
+
+          <p>For enterprises all around the world, server downtimes are often costly and destructive. Server downtimes negatively affect enterprises and their entire user base. Downtimes can be caused by a variety of factors, such as human error and network outages. A large part of the problem stems from how every client is routed to a singular server, which allows for large scale disasters that affect the entire user base.</p>
+
+          <br/> <br/> <hr/> <br/> <br/>
+          <div class="node">
+            <p>To solve this problem, our team devised a decentralized, self-healing networking framework. Our framework alleviates the issue by designating clients to hubs, which act as intermediary transfers. Hubs are clients given the role of a mini-server. When a hub goes down, the clients linked to it will either connect to an existing hub, or form a new hub. To ensure zero data loss, all hubs are backed up with the same information a server would have. </p>
+          </div>
 
             <div class="node">
-                <img class="node-img-left" src="https://urbanmilwaukee.com/wp-content/uploads/2018/06/2018-06-06_11-09-40_095.jpeg" />
-                <p>jfklsjfsdfskdfhsadfkjsdhfkjshfkjsdhfksajhfdksajhfdksjdhfksahfksajdhfksahfksdjfhksahfksajfdhaksjdhfkjsadhfksajhfksjadhfkjdhfkjshkfjhsakfdjhsadkjhasdkfjsahfdkjdahfksajdhfkjafhaksjdhfksajdfhaskdjfhsakdfjhakdshdlksjfdlksjkf</p>
+              <img class="node-img-left" id="newnode" src="img/newnode.svg" />
+            </div>
+            <br/> <br/> <br/>
+            <div class="node-img-right">
+                <p>For example, if a new node was introduced into the network, it would ping the server for a list of all hubs (1). The node then will ping all available hubs (2), and if one is available, it will join the closest (least amount of time to ping) (3). If a hub  reaches a certain threshold, it will greedily split into two hubs.</p>
             </div>
 
             <div class="node">
