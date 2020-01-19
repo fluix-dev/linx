@@ -12,7 +12,7 @@
 #bkgd-filter {
 	top: 0px;
 	position: absolute;
-	background-color: rgba(44, 45, 122,0.6);
+	background-color: rgba(44, 45, 122,0.7);
 	z-index:-15;
 	height:703px;
 }
@@ -24,6 +24,16 @@
 	padding:0px;
 	height:auto;
 	position:fixed;
+}
+
+.container2 {
+	margin-top: 0px;
+	top: 700px;
+	position: absolute;
+	z-index:-15;
+	height: 600px;
+	width: 100%;
+	background-color: #12133f;
 }
 
 .pretext{
