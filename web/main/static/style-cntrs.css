@@ -30,7 +30,14 @@
 	font-size: 35px;
 	margin-bottom: 30px;
 	margin-top: 30px;
+	color: #f1e28b;
+}
 
+.tldrcont{
+	font-size: 25px;
+	margin-bottom: 30px;
+	margin-top: 30px;
+	color: #ffffff;
 }
 
 p {
