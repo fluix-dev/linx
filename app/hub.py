@@ -1,7 +1,6 @@
 from config import BUFFER_SIZE
 from socket import AF_INET, socket, SO_REUSEADDR, SOL_SOCKET, SOCK_STREAM
 from threading import Thread
-from packets.text_packet import TextPacket
 from packets.manager import PACKET_LIST
 
 clients = {}
