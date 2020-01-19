@@ -10,13 +10,15 @@
 }
 
 #bkgd-filter {
+	top: 0px;
+	position: absolute;
 	background-color: rgba(44, 45, 122,0.6);
 	z-index:-15;
-	height:550px;
+	height:630px;
 }
 
 .bkgd {
-	margin:0px;
+	top: -180px;
 	width:110%;
 	left:-10px;
 	padding:0px;

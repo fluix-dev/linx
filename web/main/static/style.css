@@ -133,7 +133,7 @@ hr {
 
 #home {
 	order:2;
-}*/                                                                             
+}*/
 
 #about {
 	order:3;
@@ -184,7 +184,7 @@ body {
 	padding-bottom: 10px;
 	padding-right: 20px;
 	padding-left: 0px;
-	overflow:hidden;
+	overflow-x:hidden;
 }
 
 .top-thing {
@@ -217,7 +217,7 @@ body {
 	font-family: 'Raleway', sans-serif;
 	font-size: 35px;
 	color: #6d6fb0;
-	padding-left: 30px;
+	padding-left: 50px;
 	padding-top: 700px;
 }
 
@@ -226,7 +226,7 @@ body {
 	font-family: 'Raleway', sans-serif;
 	font-size: 50px;
 	color: #f1e28b;
-	padding-left: 30px;
+	padding-left: 50px;
 	margin-top: -15px;
 }
 
