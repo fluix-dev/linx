@@ -32,7 +32,6 @@ class Hub:
             client, client_address = self.server_socket.accept()
             print("%s:%s has connected." % client_address)
             TextPacket("Name: ").server_send([client])
-            #client.send(bytes([0x10]) + bytes("Name: ", "utf8"))
             addresses[client] = client_address
             Thread(target=self.handle_client, args=(client,)).start()
 
