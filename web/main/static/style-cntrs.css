@@ -1,0 +1,69 @@
+/*CSS variables*/
+:root {
+	--lig-bp: #2c2d7a;
+	/* primary */
+	--dar-bp: #12133f;
+	/* secondary */
+}
+
+.header-cntr {
+	text-align:left;
+}
+
+.header-cntr, .main-cntr {
+	padding-bottom:50px;
+	padding-left:50px;
+	padding-right:65px;
+}
+
+.head-title {
+	font-size:6rem;
+	z-index:5;
+}
+
+.main-cntr {}
+
+.tldr {
+	font-size: 35px;
+	margin-bottom: 30px;
+	margin-top: 30px;
+
+}
+
+p {
+	word-wrap: break-word;
+	line-height:40px;
+}
+
+.head-img {
+	z-index:-5;
+	position:absolute; /*fixed?*/
+	top:50px;
+	left:0px;
+	width:100%;
+	filter:brightness(0.75);
+}
+
+
+.node-img-left, .node-img-right {
+	width:200px;
+	/*display: inline-block;*/
+	position:relative;
+	border-radius: 20px;
+	top:50%;
+	/*vertical-align: -25px;*/
+}
+
+.node-img-left {
+	float:left;
+	margin-right:20px;
+}
+
+.node-img-right {
+	float:right;
+	margin-left:20px;
+}
+
+.node {
+	margin-bottom:10px;
+}
