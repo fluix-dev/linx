@@ -27,8 +27,9 @@
 }
 
 .container2 {
-	top: -210px;
-	position: relative;
+	margin-top: 0px;
+	top: 700px;
+	position: absolute;
 	z-index:-15;
 	height: 600px;
 	width: 100%;
