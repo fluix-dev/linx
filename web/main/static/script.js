@@ -145,7 +145,6 @@ var s = new sigma({
     font: 'Raleway',
     maxNodeSize: 50,
       sideMargin: 2
-    // animationsTime: 1000	
   }
 });
 

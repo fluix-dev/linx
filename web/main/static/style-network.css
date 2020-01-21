@@ -11,19 +11,12 @@
 	position:relative;
 	height:100%;
 	width: 100%;
-	/*background-color: white;*/
 	z-index:1; 
 }
 
 .content {
 	height:100vh;
 }
-/*
-.header-bar {
-	border-bottom-color: var(--dar-bp);
-}
-
-*/
 
 .floater {
 	position:fixed;
@@ -32,7 +25,6 @@
 	width:400px;
 	height:275px;
 	display: inline-block;
-	/*border:5px dashed red;*/
 	background: radial-gradient(farthest-corner at 250px 200px, rgba(18,19,63,1) 0%, rgba(18,19,63,0.5) 30%, rgba(18,19,63,0) 70%);
 	/*background: radial-gradient(farthest-corner at 200px 138px, rgba(109,111,176,1) 0%, rgba(109,111,176,0.5) 30%, rgba(109,111,176,0) 70%);*/
 	word-wrap: break-word;
@@ -48,6 +40,5 @@
 }
 
 body {
-	/*background-color: var(--dar-bp);*/
 	overflow:hidden;
 }
