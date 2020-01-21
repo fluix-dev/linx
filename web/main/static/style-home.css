@@ -37,9 +37,11 @@
 }
 
 .download {
-	margin-top: 0px;
 	top: 700px;
+	margin-top: 0px;
 	position: absolute;
+	text-align: center;
+
 	z-index:0;
 	height: 200px;
 	width: 100%;
@@ -50,22 +52,19 @@
 
 #download-url:hover {
 	border:1px solid white;
-	border-radius: 90px;
+	border-radius: 0px;
 }
 
 #download-url{
-	padding: 18px;
+	width:200px;
+	padding: 19px;
 	text-decoration: none;
 }
 
 .downloadtext {
-	position: absolute;
-	text-align: center;
 	margin-top: 90px;
-	left: 45%;
-	margin-right:auto;
+	text-align: center;
 	color: #6d6fb0;
-	display: inline-block;
 }
 
 .pretext{
