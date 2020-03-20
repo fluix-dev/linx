@@ -5,7 +5,7 @@
 <header class="header-cntr">
     <br> <br> <br> <br> <br> <br> <br> <br>
     <br> <br> <br> <br> <br> <br> <br> <br>
-    <div> <img class="head-img" src="img/ideanodegram.svg"/> </div>
+    <div> <img class="head-img" src="{% static 'img/ideanodegram.svg' %}"/> </div>
     <h1 class="head-title">the idea</h1>
 </header>
 
@@ -31,7 +31,7 @@
         <p>To solve this problem, our team devised a decentralized, self-healing networking framework. Our framework alleviates the issue by designating clients to hubs, which act as intermediary transfers. Hubs are clients given the role of a mini-server. When a hub goes down, the clients linked to it will either connect to an existing hub, or form a new hub. To ensure zero data loss, all hubs are backed up with the same information a server would have. </p>
     </div>
     <div class="node" id="newnode-cntr">
-        <img class="node-img-left" id="newnode-img" src="img/newnode.svg" />
+        <img class="node-img-left" id="newnode-img" src="{% static 'img/newnode.svg' %}" />
         <p id="newnode-p">For example, if a new node was introduced into the network, it would ping the server for a list of all hubs (1). The node then will ping all available hubs (2), and if one is available, it will join the closest (least amount of time to ping) (3). If a hub  reaches a certain threshold, it will greedily split into two hubs.</p>
     </div>
 </div>
