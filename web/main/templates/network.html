@@ -1,44 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Network | Linx</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style-network.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:500|Raleway&display=swap">
+{% extends 'base.html' %}
+{% load static %}
 
-    <link href="bootstrap/vendor/bootstrap/css/bootstrap.min.css" cross-origin=
-    'anonymous' rel="stylesheet">
-    <link href="bootstrap/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-    <link href="bootstrap/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-</head>
-<body>
-    <div class="everything">
-        <!-- Navigation -->
-        <nav class="navbar navbar-light static-top header-bar">
-            <div class="container">
-                <img class="logo" src="img/linx.svg">
-                <h1 id="title"><a href="index.html">linx</a></h1>
-
-                <span class="menuitem text-cool" id="about"><a href="about.html" class="text-cool">the idea</a></span>
-                <span class="menuitem" id="network"><a href="network.html">network</a></span>
-            </div>
-        </nav>
-
-        <div class="content" style="width:100%">
-            <div class="floater">
-                <div class="float-text">
-                    <h3 id="float-title">the network</h3>
-                    <p style="font-size:16px">A sample network. Hover the mouse over nodes to see its role in the network.</p>
-                </div>
-            </div>
-            <div id="sigma-container"></div>
+{% block body %}
+<div class="content" style="width:100%">
+    <div class="floater">
+        <div class="float-text">
+            <h3 id="float-title">the network</h3>
+            <p style="font-size:16px">A sample network. Hover the mouse over nodes to see its role in the network.</p>
         </div>
     </div>
+    <div id="sigma-container"></div>
 
     <script src="sigma.js\sigma.min.js"></script>
     <script src="script.js"></script>
-</body>
-</html>
+</div>
+{% endblock %}

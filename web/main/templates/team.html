@@ -1,59 +1,27 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>The Team | Linx</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style-cntrs.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:500|Raleway&display=swap">
+{% extends 'base.html' %}
+{% load static %}
 
-    <link href="bootstrap/vendor/bootstrap/css/bootstrap.min.css" cross-origin=
-    'anonymous' rel="stylesheet">
+{% block body %}
+<header class="header-cntr">
+    <br /> <br /> <br /> <br /> <br /> <br /> <br />
+    <img class="head-img" src="https://www.branddrivendigital.com/wp-content/uploads/2012/02/idea-business.085.jpg"/>
+    <h1 class="head-title">the team</h1>
+</header>
 
-    <link href="bootstrap/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-    <link href="bootstrap/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-</head>
-<body>
-    <div class="everything">
-        <!-- Navigation -->
-        <nav class="navbar navbar-light static-top header-bar">
-            <div class="container">
-                <img class="logo" src="img/linx.svg">
-                <h1 id="title"><a href="index.html">linx</a></h1>
-
-                <span class="menuitem text-cool" id="about"><a href="about.html" class="text-cool">the idea</a></span>
-                <span class="menuitem text-primary" id="team"><a href="team.html">the team</a></span>
-                <span class="menuitem" id="network"><a href="network.html">network</a></span>
-
-
-            </div>
-        </nav>
-
-        <header class="header-cntr">
-            <br /> <br /> <br /> <br /> <br /> <br /> <br />
-            <img class="head-img" src="https://www.branddrivendigital.com/wp-content/uploads/2012/02/idea-business.085.jpg"/>
-            <h1 class="head-title">the team</h1>
-        </header>
-
-        <div class="main-cntr">
-            <p class="tldr">tl;dr - wise words.</p>
-            <!-- <div id="container"></div> -->
-            <div class="node">
-            <p>We are a team of 5 developers from the GTA, passionate about everything programming. </p>
-            </div>
-
-            <div class="node">
-                <img class="node-img-left" src="https://urbanmilwaukee.com/wp-content/uploads/2018/06/2018-06-06_11-09-40_095.jpeg" />
-                <p>jfklsjfsdfskdfhsadfkjsdhfkjshfkjsdhfksajhfdksajhfdksjdhfksahfksajdhfksahfksdjfhksahfksajfdhaksjdhfkjsadhfksajhfksjadhfkjdhfkjshkfjhsakfdjhsadkjhasdkfjsahfdkjdahfksajdhfkjafhaksjdhfksajdfhaskdjfhsakdfjhakdshdlksjfdlksjkf</p>
-            </div>
-
-            <div class="node">
-            <p>the best words.</p>
-            </div>
-        </div>
-
+<div class="main-cntr">
+    <p class="tldr">tl;dr - wise words.</p>
+    <!-- <div id="container"></div> -->
+    <div class="node">
+    <p>We are a team of 5 developers from the GTA, passionate about everything programming. </p>
     </div>
-</body>
-</html>
+
+    <div class="node">
+        <img class="node-img-left" src="https://urbanmilwaukee.com/wp-content/uploads/2018/06/2018-06-06_11-09-40_095.jpeg" />
+        <p>jfklsjfsdfskdfhsadfkjsdhfkjshfkjsdhfksajhfdksajhfdksjdhfksahfksajdhfksahfksdjfhksahfksajfdhaksjdhfkjsadhfksajhfksjadhfkjdhfkjshkfjhsakfdjhsadkjhasdkfjsahfdkjdahfksajdhfkjafhaksjdhfksajdfhaskdjfhsakdfjhakdshdlksjfdlksjkf</p>
+    </div>
+
+    <div class="node">
+    <p>the best words.</p>
+    </div>
+</div>
+{% endblock %}
