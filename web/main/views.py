@@ -4,8 +4,8 @@ from django.shortcuts import render
 def index(request):
     return render(request, 'index.html')
 
-def team(request):
-    return render(request, 'team.html')
+#def team(request):
+#    return render(request, 'team.html')
 
 def network(request):
     return render(request, 'network.html')
