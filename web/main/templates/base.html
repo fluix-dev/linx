@@ -27,7 +27,9 @@
         <h1 id="title"><a href="{% url 'index' %}">linx</a></h1>
 
         <span class="menuitem text-cool" id="about"><a href="{% url 'about' %}" class="text-cool">the idea</a></span>
-        <!-- <span class="menuitem text-primary" id="team"><a href="{% url 'team' %}">the team</a></span> -->
+        {% comment %}
+        <span class="menuitem text-primary" id="team"><a href="{% url 'team' %}">the team</a></span>
+        {% endcomment %}
         <span class="menuitem" id="network"><a href="{% url 'network' %}">network</a></span>
       </div>
     </nav>
